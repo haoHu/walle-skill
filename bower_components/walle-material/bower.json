@@ -1,0 +1,34 @@
+{
+	"name" : "walle=material-desion",
+	"authors": [
+		"bluefish"
+	],
+	"description" : "Material Design theme for walle",
+	"main": [
+		"dist/css/walle.css",
+		"dist/js/walle.js"
+	],
+	"jgnore" : [
+		".gitignore",
+		".editorconfig",
+		".jshintrc",
+		"Gruntfile.json",
+		"index.html",
+		"index.css",
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test"
+	],
+	"keywords": [
+		"theme"
+	],
+	"dependencies": {
+		"jquery": "^2.2",
+		"bootstrap": "~3.3.6",
+		"bootstrap-sass": "~3.3.6",
+		"bootstrap-material-design" : "latest",
+		"dropdown.js" : "latest",
+		"iscroll" : "latest"
+	}
+}

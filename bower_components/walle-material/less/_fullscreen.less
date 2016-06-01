@@ -1,0 +1,17 @@
+.walle-full-screen {
+	display: block;
+	position: relative;
+	padding : 10px;
+	.box-size(@walle-screen-width, @walle-screen-height);
+	background : @walle-body-bg;
+	text-align: center;
+	.full-screen-body {
+		display: block;
+		position: relative;
+		border: none;
+		border-radius: @walle-border-radius;
+		.box-size(@walle-full-screen-width,@walle-full-screen-height);
+		background: #ffffff;
+		overflow: hidden;
+	}
+}

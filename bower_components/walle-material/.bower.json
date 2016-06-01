@@ -1,0 +1,45 @@
+{
+  "name": "walle=material-desion",
+  "authors": [
+    "bluefish"
+  ],
+  "description": "Material Design theme for walle",
+  "main": [
+    "dist/css/walle.css",
+    "dist/js/walle.js"
+  ],
+  "jgnore": [
+    ".gitignore",
+    ".editorconfig",
+    ".jshintrc",
+    "Gruntfile.json",
+    "index.html",
+    "index.css",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "keywords": [
+    "theme"
+  ],
+  "dependencies": {
+    "jquery": "^2.2",
+    "bootstrap": "~3.3.6",
+    "bootstrap-sass": "~3.3.6",
+    "bootstrap-material-design": "latest",
+    "dropdown.js": "latest",
+    "iscroll": "latest"
+  },
+  "homepage": "https://github.com/haoHu/walle-material",
+  "version": "0.1.0",
+  "_release": "0.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.0",
+    "commit": "fa49af0cc0be8722d558465da7fe1c5a6c363168"
+  },
+  "_source": "https://github.com/haoHu/walle-material.git",
+  "_target": "*",
+  "_originalSource": "walle-material"
+}

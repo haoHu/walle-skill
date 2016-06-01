@@ -1,0 +1,117 @@
+.walle-menu {
+	display: block; 
+	position: relative;
+	width : 100%;
+	// height : @walle-btn-outer1;
+	margin: 0 auto;
+	overflow : hidden;
+	/* Prevent native touch events on Windows */
+	-ms-touch-action: none;
+
+	/* Prevent the callout on tap-hold and text selection */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	/* Prevent text resize on orientation change, useful for web-apps */
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+
+	> .menu-head {
+		margin : 50px auto @walle-header-margin-bottom;
+	}
+
+	.menu-title {
+		margin: 0;
+		padding : 0;
+		font-size: @walle-font-60pt;
+		font-weight: 700;
+		line-height: 1em;
+		letter-spacing: 2px;
+		color : @walle-base-color;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	> .menu-body {
+		display: block;
+		position: relative;
+		width : (@walle-btn-outer1 + @walle-btn-gap * 2);
+		height : 100%;
+		margin : 0 auto;
+
+		> .menu-list {
+			position : relative;
+			z-index: 1;
+			min-width : 2000px;
+			height : 100%;
+			margin: 0;
+			padding: 0;
+			/* Prevent elements to be highlighted on tap */
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+
+			/* Put the scroller into the HW Compositing layer right from the start */
+			-webkit-transform: translateZ(0);
+			-moz-transform: translateZ(0);
+			-ms-transform: translateZ(0);
+			-o-transform: translateZ(0);
+			transform: translateZ(0);
+			-webkit-user-select: none;
+		    -moz-user-select: none;
+		    -ms-user-select: none;
+		    user-select: none;
+		    -webkit-text-size-adjust: none;
+		    -moz-text-size-adjust: none;
+		    -ms-text-size-adjust: none;
+		    -o-text-size-adjust: none;
+		    text-size-adjust: none;
+		}
+	}
+
+	.menu-item {
+		display: inline-block;
+		position: relative;
+		height: auto;
+		padding-bottom: 40px + 30pt;
+		// height: @walle-btn-outer1;
+		// float : left;
+	}
+	.menu-item .label {
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 2;
+		padding: 40px 0 0;
+		display: block;
+		margin: 0;
+		background: transparent;
+		font-size: @walle-font-30pt;
+		font-weight: 400;
+		line-height: 1em;
+		letter-spacing: 1px;
+		text-align: center;
+		vertical-align: middle;
+	}
+	&.skill-menu .menu-item .label {
+		background: @walle-body-bg;
+		bottom: 30px;
+	}
+}
+
+.walle-menu.walle-menu-sm {
+	// height : @walle-btn-outer2;
+	> .menu-body {
+		width : (@walle-btn-outer2 + @walle-btn-gap * 2);
+	}
+	.menu-item {
+		// height : @walle-btn-outer2;
+	}
+}
+

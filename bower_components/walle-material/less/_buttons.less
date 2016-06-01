@@ -1,0 +1,71 @@
+
+.walle-typo-button(@colorContrast: false) {
+	font-size : @walle-font-18pt;
+	font-weight : 500;
+	text-transform : capitalize;
+	line-height: 1.2;
+	letter-spacing : 0;
+
+	& when (@colorContrast) {
+		opacity : 0.87;
+	}
+}
+
+// mdb default walle flat buttons
+// outer size 264px;
+// inner size 175px;
+.walle-btn {
+	border : none;
+	border-radius : @walle-btn-radius;
+	position : relative;
+	.box-size(@walle-btn-outer2, @walle-btn-outer2);
+	padding : (@walle-btn-outer2 - @walle-btn-inner2) / 2;
+	margin : 0 @walle-btn-gap;
+	// margin-left : @walle-btn-gap;
+	// margin-right : @walle-btn-gap;
+	.walle-typo-button();
+	background : @walle-btn-bg!important;
+	will-change : box-shadow, transform;
+	transition: box-shadow 0.2s @mdb-animation-curve-fast-out-linear-in,
+		background-color 0.2s @mdb-animation-curve-default,
+		color 0.2s @mdb-animation-curve-default;
+	outline : 0;
+	cursor : pointer;
+	text-decoration : none;
+
+	&::-moz-focus-inner {
+		border : 0;
+	}
+	// btn-flat
+	// background : transparent;
+	
+	> .btn-inner {
+		display: inline-block;
+		position : relative;
+		.box-size(@walle-btn-inner2);
+		padding: 0;
+		margin:0;
+		border : none;
+		border-radius : @walle-btn-radius;
+		background-color: @walle-btn-inner-bg;
+		overflow: hidden;
+
+		// TODO Walle按钮中间的图像涉及到不同尺寸按钮，所以最好采用
+		// font icon或者SVG图标代替单独图片
+		> img {
+			.walle-btn-graphic();
+		}
+	}
+
+}
+
+// mdb default walle flat large buttons 
+// outer size 330px;
+// inner size 200px;
+.walle-btn.walle-btn-lg {
+	.box-size(@walle-btn-outer1);
+	padding : (@walle-btn-outer1 - @walle-btn-inner1) / 2;
+	> .btn-inner {
+		.box-size(@walle-btn-inner1);
+	}
+}

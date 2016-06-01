@@ -1,0 +1,226 @@
+/*
+
+To get this list of colors inject jQuery at http://www.google.com/design/spec/style/color.html#color-color-palette
+
+Then, run this script to get the list.
+
+
+(function() {
+  var colors = {}, main = {};
+  $(".color-group").each(function() {
+    var color = $(this).find(".name").text().trim().toLowerCase().replace(" ", "-");
+    colors[color] = {};
+
+    $(this).find(".color").not(".main-color").each(function() {
+      var shade = $(this).find(".shade").text().trim(),
+          hex   = $(this).find(".hex").text().trim();
+
+      colors[color][shade] = hex;
+    });
+    main[color] = color + "-" + $(this).find(".main-color .shade").text().trim();
+
+  });
+  var LESS = "";
+  $.each(colors, function(name, shades) {
+    LESS += "\n\n";
+    $.each(shades, function(shade, hex) {
+      LESS += "@" + name + "-" + shade + ": " + hex + ";\n";
+    });
+    if (main[name]) {
+      LESS += "@" + name + ": " + main[name] + ";\n";
+    }
+  });
+  console.log(LESS);
+})();
+
+
+*/
+/* ANIMATION */
+/* SHADOWS */
+.walle-btn {
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  width: 264px;
+  height: 264px;
+  padding: 44.5px;
+  margin: 0 20px;
+  font-size: 18pt;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 1.2;
+  letter-spacing: 0;
+  background: #fff !important;
+  will-change: box-shadow, transform;
+  -webkit-transition: -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+       -o-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+.walle-btn::-moz-focus-inner {
+  border: 0;
+}
+.walle-btn > .btn-inner {
+  display: inline-block;
+  position: relative;
+  width: 175px;
+  height: 175px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #acd4e8;
+  overflow: hidden;
+}
+.walle-btn > .btn-inner > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0 none;
+}
+.walle-btn.walle-btn-lg {
+  width: 330px;
+  height: 330px;
+  padding: 65px;
+}
+.walle-btn.walle-btn-lg > .btn-inner {
+  width: 200px;
+  height: 200px;
+}
+.walle-full-screen {
+  display: block;
+  position: relative;
+  padding: 10px;
+  width: 1280px;
+  height: 720px;
+  background: #303030;
+  text-align: center;
+}
+.walle-full-screen .full-screen-body {
+  display: block;
+  position: relative;
+  border: none;
+  border-radius: 30px;
+  width: 1260px;
+  height: 700px;
+  background: #ffffff;
+  overflow: hidden;
+}
+.walle-menu {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  /* Prevent native touch events on Windows */
+  -ms-touch-action: none;
+  /* Prevent the callout on tap-hold and text selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Prevent text resize on orientation change, useful for web-apps */
+  -webkit-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+}
+.walle-menu > .menu-head {
+  margin: 50px auto 100px;
+}
+.walle-menu .menu-title {
+  margin: 0;
+  padding: 0;
+  font-size: 60pt;
+  font-weight: 700;
+  line-height: 1em;
+  letter-spacing: 2px;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+}
+.walle-menu > .menu-body {
+  display: block;
+  position: relative;
+  width: 370px;
+  height: 100%;
+  margin: 0 auto;
+}
+.walle-menu > .menu-body > .menu-list {
+  position: relative;
+  z-index: 1;
+  min-width: 2000px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* Prevent elements to be highlighted on tap */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* Put the scroller into the HW Compositing layer right from the start */
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+}
+.walle-menu .menu-item {
+  display: inline-block;
+  position: relative;
+  height: auto;
+  padding-bottom: 80px;
+}
+.walle-menu .menu-item .label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 40px 0 0;
+  display: block;
+  margin: 0;
+  background: transparent;
+  font-size: 30pt;
+  font-weight: 400;
+  line-height: 1em;
+  letter-spacing: 1px;
+  text-align: center;
+  vertical-align: middle;
+}
+.walle-menu.skill-menu .menu-item .label {
+  background: #303030;
+  bottom: 30px;
+}
+.walle-menu.walle-menu-sm > .menu-body {
+  width: 304px;
+}
+.walle-modal.modal .modal-dialog {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.walle-modal.modal .modal-content {
+  background: transparent;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background: -webkit-radial-gradient(ellipse, rgba(0, 0, 0, 0.75), #000000);
+  background: -o-radial-gradient(ellipse, rgba(0, 0, 0, 0.75), #000000);
+  background: radial-gradient(ellipse, rgba(0, 0, 0, 0.75), #000000);
+  opacity: 0;
+}
+.modal-backdrop.in {
+  opacity: 1;
+}
+/*# sourceMappingURL=walle.css.map */

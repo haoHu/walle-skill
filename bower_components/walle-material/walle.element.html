@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Material Design for Walle</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Material Design fonts -->
+  <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+  <!-- Bootstrap Material Design -->
+  <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css">
+  <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.css">
+
+  <!-- Dropdown.js -->
+  <link href="bower_components/dropdown.js/jquery.dropdown.css" rel="stylesheet">
+
+  <!-- Walle theme -->
+  <link rel="stylesheet" href="dist/css/walle.css">
+
+  <!-- Page style -->
+  <link href="index.css" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <!-- iScroll -->
+  <script src="bower_components/iscroll/build/iscroll.js"></script>
+	<style type="text/css">
+	body {
+		padding: 2em;
+		/*background: #303030;*/
+	}
+	.walle-el-box {
+		background: #303030;
+		padding: 30px;
+	}
+	.btn-icon {
+		width : 100%;
+		height: 100%;
+		display: block;
+		font-size: 120pt;
+	}
+	.walle-screen {
+		margin: 2em auto;
+		display: block;
+		width : 1280px;
+		height : 720px;
+		background: #303030;
+		outline: 5px dashed blue;
+	}
+	</style>
+</head>
+<body>
+
+  <h1>利用Bootstrap3 UI框架采用Material Design设计模式制作Walle的UI元素</h1>
+  <h2>按钮 <code>.btn</code></h2>
+  <div class="row">
+  	<div class="col-md-12">
+  		<h3>扁平化按钮-Flat Buttons（默认样式）</h3>
+  		<p class="bs-component">
+			<a href="javascript:void(0)" class="btn"><code>btn</code> only</a>
+			<a href="javascript:void(0)" class="btn active"><code>.active</code></a>
+			<a href="javascript:void(0)" class="btn btn-default">Default</a>
+			<a href="javascript:void(0)" class="btn btn-primary">Primary</a>
+			<a href="javascript:void(0)" class="btn btn-success">Success</a>
+			<a href="javascript:void(0)" class="btn btn-info">Info</a>
+			<a href="javascript:void(0)" class="btn btn-warning">Warning</a>
+			<a href="javascript:void(0)" class="btn btn-danger">Danger</a>
+			<a href="javascript:void(0)" class="btn btn-link">Link</a>
+  		</p>
+
+  	</div>
+  	<div class="col-md-12">
+  		<h3>升起的按钮-Raised Buttons <code>.btn-raised</code></h3>
+  		<p class="bs-component">
+			<a href="javascript:void(0)" class="btn btn-raised active"><code>.active</code></a>
+			<a href="javascript:void(0)" class="btn btn-raised btn-default">Default</a>
+			<a href="javascript:void(0)" class="btn btn-raised btn-primary">Primary</a>
+			<a href="javascript:void(0)" class="btn btn-raised btn-success">Success</a>
+			<a href="javascript:void(0)" class="btn btn-raised btn-info">Info</a>
+			<a href="javascript:void(0)" class="btn btn-raised btn-warning">Warning</a>
+			<a href="javascript:void(0)" class="btn btn-raised btn-danger">Danger</a>
+			<a href="javascript:void(0)" class="btn btn-raised btn-link">Link</a>
+  		</p>
+  	</div>
+  	<div class="col-md-12">
+  		<h3>禁用的扁平按钮--Disabled Flat Buttons </h3>
+  		<p class="bs-component" >
+			<a href="javascript:void(0)" class="btn disabled"><code>btn</code> only</a>
+			<a href="javascript:void(0)" class="btn btn-default disabled">Default</a>
+			<a href="javascript:void(0)" class="btn btn-primary disabled">Primary</a>
+			<a href="javascript:void(0)" class="btn btn-success disabled">Success</a>
+			<a href="javascript:void(0)" class="btn btn-info disabled">Info</a>
+			<a href="javascript:void(0)" class="btn btn-warning disabled">Warning</a>
+			<a href="javascript:void(0)" class="btn btn-danger disabled">Danger</a>
+			<a href="javascript:void(0)" class="btn btn-link disabled">Link</a>
+  		</p>
+  		<h3>禁用的升起按钮--Disabeled Raised Button</h3>
+  		<p class="bs-component">
+			<a href="javascript:void(0)" class="btn btn-raised btn-default disabled">Default</a>
+			<a href="javascript:void(0)" class="btn btn-raised btn-primary disabled">Primary</a>
+			<a href="javascript:void(0)" class="btn btn-raised btn-success disabled">Success</a>
+			<a href="javascript:void(0)" class="btn btn-raised btn-info disabled">Info</a>
+			<a href="javascript:void(0)" class="btn btn-raised btn-warning disabled">Warning</a>
+			<a href="javascript:void(0)" class="btn btn-raised btn-danger disabled">Danger</a>
+			<a href="javascript:void(0)" class="btn btn-raised btn-link disabled">Link</a>
+  		</p>
+  		
+
+  	</div>
+  	<div class="col-md-12">
+  		<h3>Button Size</h3>
+  		<p class="bs-component">
+			<a href="javascript:void(0)" class="btn btn-raised btn-lg">Large button</a>
+			<a href="javascript:void(0)" class="btn btn-raised">Default button</a>
+			<a href="javascript:void(0)" class="btn btn-raised btn-sm">Small button</a>
+			<a href="javascript:void(0)" class="btn btn-raised btn-xs">xs button</a>
+  		</p>
+  	</div>
+  	<div class="col-md-12">
+  		<h3>Floating Action Buttons</h3>
+  		<p class="bs-component">
+			<a href="javascript:void(0)" class="btn btn-default btn-fab"><i class="material-icons">grade</i></a>
+			<a href="javascript:void(0)" class="btn btn-primary btn-fab"><i class="material-icons">grade</i></a>
+			<a href="javascript:void(0)" class="btn btn-success btn-fab"><i class="material-icons">grade</i></a>
+			<a href="javascript:void(0)" class="btn btn-info btn-fab"><i class="material-icons">grade</i></a>
+			<a href="javascript:void(0)" class="btn btn-warning btn-fab"><i class="material-icons">grade</i></a>
+			<a href="javascript:void(0)" class="btn btn-danger btn-fab"><i class="material-icons">grade</i></a>
+  		</p>
+  		<h4><code>.btn-group-sm .btn-fad</code> 或者 <code>.btn-fab.btn-fab-mini</code></h4>
+  		<p class="bs-component">
+  			<div class="btn-group-sm">
+				<a href="javascript:void(0)" class="btn btn-default btn-fab"><i class="material-icons">grade</i></a>
+				<a href="javascript:void(0)" class="btn btn-primary btn-fab"><i class="material-icons">grade</i></a>
+				<a href="javascript:void(0)" class="btn btn-success btn-fab"><i class="material-icons">grade</i></a>
+				<a href="javascript:void(0)" class="btn btn-info btn-fab"><i class="material-icons">grade</i></a>
+				<a href="javascript:void(0)" class="btn btn-warning btn-fab"><i class="material-icons">grade</i></a>
+				<a href="javascript:void(0)" class="btn btn-danger btn-fab"><i class="material-icons">grade</i></a>
+  			</div>
+  			<div class="bs-component">
+				<a href="javascript:void(0)" class="btn btn-default btn-fab btn-fab-mini"><i class="material-icons">grade</i></a>
+				<a href="javascript:void(0)" class="btn btn-primary btn-fab btn-fab-mini"><i class="material-icons">grade</i></a>
+				<a href="javascript:void(0)" class="btn btn-success btn-fab btn-fab-mini"><i class="material-icons">grade</i></a>
+				<a href="javascript:void(0)" class="btn btn-info btn-fab btn-fab-mini"><i class="material-icons">grade</i></a>
+				<a href="javascript:void(0)" class="btn btn-warning btn-fab btn-fab-mini"><i class="material-icons">grade</i></a>
+				<a href="javascript:void(0)" class="btn btn-danger btn-fab btn-fab-mini"><i class="material-icons">grade</i></a>
+  			</div>
+  		</p>
+  	</div>
+  	<div class="col-md-12">
+  		<h3>Walle Action Button</h3>
+  		<p class="bs-component walle-el-box">
+  			<a href="javascript:void(0)" class="btn btn-raised walle-btn">
+  				<span class="btn-inner">
+  					<i class="material-icons btn-icon">grade</i>
+  				</span>
+  			</a>
+  			<a href="javascript:void(0)" class="btn btn-raised walle-btn">
+  				<span class="btn-inner">
+  					<img src="img/weather.jpeg" alt="" class="btn-icon">
+  				</span>
+  			</a>
+  		</p>
+  		<h3>Walle Skill Menu Button <code>.walle-btn.walle-btn-lg</code></h3>
+  		<p class="bs-component walle-el-box">
+  			<a href="javascript:void(0)" class="btn walle-btn walle-btn-lg">
+  				<span class="btn-inner">
+  					<i class="material-icons btn-icon">grade</i>
+  				</span>
+  			</a>
+  			<a href="javascript:void(0)" class="btn walle-btn walle-btn-lg">
+  				<span class="btn-inner">
+  					<img src="img/weather.jpeg" alt="" class="btn-icon">
+  				</span>
+  			</a>
+  		</p>
+  	</div>
+  </div>
+
+  <h2>全屏内容<code>.walle-full-screen</code></h2>
+  <div class="row">
+  	<div class="col-md-12">
+  		<div class="walle-screen">
+  			<div class="walle-full-screen">
+	  			<div class="full-screen-body">
+	  				<img src="img/walle.jpg" alt="" class="src">
+	  			</div>
+	  		</div>
+  		</div>
+  		
+  	</div>
+  </div>
+
+  <h2>菜单<code>.walle-menu</code></h2>
+  <div class="row">
+  	<div class="col-md-12">
+  		<div class="walle-screen">
+  			<div class="walle-menu skill-menu" >
+  				<div class="menu-head">
+  					<h2 class="menu-title">Skill Menu</h2>
+  				</div>
+  				<div class="menu-body" id="walle_menu_1">
+  					<div class="menu-list">
+						<div class="menu-item">
+							<a href="javascript:void(0)" class="btn walle-btn walle-btn-lg">
+							<span class="btn-inner">
+							<img src="img/weather.jpeg" alt="" class="btn-icon">
+							</span>
+							</a>
+							<label class="label" for="">Menu Option</label>
+						</div>
+						<div class="menu-item">
+							<a href="javascript:void(0)" class="btn walle-btn walle-btn-lg">
+							<span class="btn-inner">
+							<img src="img/weather.jpeg" alt="" class="btn-icon">
+							</span>
+							</a>
+							<label class="label" for="">Menu Option</label>
+						</div>
+						<div class="menu-item">
+							<a href="javascript:void(0)" class="btn walle-btn walle-btn-lg">
+							<span class="btn-inner">
+							<img src="img/weather.jpeg" alt="" class="btn-icon">
+							</span>
+							</a>
+							<label class="label" for="">Menu Option</label>
+						</div>
+						<div class="menu-item">
+							<a href="javascript:void(0)" class="btn walle-btn walle-btn-lg">
+							<span class="btn-inner">
+							<img src="img/weather.jpeg" alt="" class="btn-icon">
+							</span>
+							</a>
+							<label class="label" for="">Menu Option</label>
+						</div>
+						<div class="menu-item">
+							<a href="javascript:void(0)" class="btn walle-btn walle-btn-lg">
+							<span class="btn-inner">
+							<img src="img/weather.jpeg" alt="" class="btn-icon">
+							</span>
+							</a>
+							<label class="label" for="">Menu Option</label>
+						</div>
+						<div class="menu-item">
+							<a href="javascript:void(0)" class="btn walle-btn walle-btn-lg">
+							<span class="btn-inner">
+							<img src="img/weather.jpeg" alt="" class="btn-icon">
+							</span>
+							</a>
+							<label class="label" for="">Menu Option</label>
+						</div>
+					</div>
+  				</div>
+			</div>
+			
+  		</div>
+		
+  	</div>
+  </div>
+  <h3>小号列表按钮组<code>.walle-menu.walle-menu-sm</code></h3>
+  <div class="row">
+  	<div class="col-md-12">
+  		<div class="walle-screen">
+  			<div class="walle-menu walle-menu-sm" >
+  				<div class="menu-head">
+  					<h2 class="menu-title">List Title</h2>
+  				</div>
+  				<div class="menu-body" id="walle_menu_2">
+  					<ul class="menu-list">
+						<li class="menu-item">
+							<a href="javascript:void(0)" class="btn walle-btn walle-btn">
+							<span class="btn-inner">
+							<img src="img/weather.jpeg" alt="" class="btn-icon">
+							</span>
+							</a>
+							<label class="label" for="">List Options</label>
+						</li>
+						<li class="menu-item">
+							<a href="javascript:void(0)" class="btn walle-btn walle-btn">
+							<span class="btn-inner">
+							<img src="img/weather.jpeg" alt="" class="btn-icon">
+							</span>
+							</a>
+							<label class="label" for="">List Options</label>
+						</li>
+						<li class="menu-item">
+							<a href="javascript:void(0)" class="btn walle-btn walle-btn">
+							<span class="btn-inner">
+							<img src="img/weather.jpeg" alt="" class="btn-icon">
+							</span>
+							</a>
+							<label class="label" for="">List Options</label>
+						</li>
+						<li class="menu-item">
+							<a href="javascript:void(0)" class="btn walle-btn walle-btn">
+							<span class="btn-inner">
+							<img src="img/weather.jpeg" alt="" class="btn-icon">
+							</span>
+							</a>
+							<label class="label" for="">List Options</label>
+						</li>
+						<li class="menu-item">
+							<a href="javascript:void(0)" class="btn walle-btn walle-btn">
+							<span class="btn-inner">
+							<img src="img/weather.jpeg" alt="" class="btn-icon">
+							</span>
+							</a>
+							<label class="label" for="">List Options</label>
+						</li>
+						<li class="menu-item">
+							<a href="javascript:void(0)" class="btn walle-btn walle-btn">
+							<span class="btn-inner">
+							<img src="img/weather.jpeg" alt="" class="btn-icon">
+							</span>
+							</a>
+							<label class="label" for="">List Options</label>
+						</li>
+					</ul>
+  				</div>
+			</div>
+  		</div>
+  		
+  	</div>
+  </div>
+  <h3>全屏下弹出选项菜单<code></code></h3>
+  <div class="row">
+  	<div class="col-md-12">
+  		<div class="walle-screen">
+  			<div class="walle-full-screen">
+	  			<div class="full-screen-body">
+	  				<img src="img/walle.jpg" alt="" class="src">
+	  			</div>
+	  		</div>
+  		</div>
+  		<div class="modal walle-modal" id="mymodal" role="dialog">
+  			<div class="modal-dialog">
+  				<div class="modal-content">
+  					<div class="walle-menu walle-menu-sm" >
+		  				<div class="menu-head">
+		  					<h2 class="menu-title">List Title</h2>
+		  				</div>
+		  				<div class="menu-body" id="walle_menu_2">
+		  					<ul class="menu-list">
+								<li class="menu-item">
+									<a href="javascript:void(0)" class="btn walle-btn walle-btn">
+									<span class="btn-inner">
+									<img src="img/weather.jpeg" alt="" class="btn-icon">
+									</span>
+									</a>
+									<label class="label" for="">List Options</label>
+								</li>
+								<li class="menu-item">
+									<a href="javascript:void(0)" class="btn walle-btn walle-btn">
+									<span class="btn-inner">
+									<img src="img/weather.jpeg" alt="" class="btn-icon">
+									</span>
+									</a>
+									<label class="label" for="">List Options</label>
+								</li>
+								<li class="menu-item">
+									<a href="javascript:void(0)" class="btn walle-btn walle-btn">
+									<span class="btn-inner">
+									<img src="img/weather.jpeg" alt="" class="btn-icon">
+									</span>
+									</a>
+									<label class="label" for="">List Options</label>
+								</li>
+								<li class="menu-item">
+									<a href="javascript:void(0)" class="btn walle-btn walle-btn">
+									<span class="btn-inner">
+									<img src="img/weather.jpeg" alt="" class="btn-icon">
+									</span>
+									</a>
+									<label class="label" for="">List Options</label>
+								</li>
+								<li class="menu-item">
+									<a href="javascript:void(0)" class="btn walle-btn walle-btn">
+									<span class="btn-inner">
+									<img src="img/weather.jpeg" alt="" class="btn-icon">
+									</span>
+									</a>
+									<label class="label" for="">List Options</label>
+								</li>
+								<li class="menu-item">
+									<a href="javascript:void(0)" class="btn walle-btn walle-btn">
+									<span class="btn-inner">
+									<img src="img/weather.jpeg" alt="" class="btn-icon">
+									</span>
+									</a>
+									<label class="label" for="">List Options</label>
+								</li>
+							</ul>
+		  				</div>
+					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  	<div class="col-md-12">
+  		<a href="javascript:void 0;" class="btn btn-raised btn-primary" data-toggle="modal" data-target="#mymodal">打开窗口</a>
+  	</div>
+  </div>
+  <h2>卡片<code>.card</code></h2>
+  <div class="row">
+  	<div class="col-md-12">
+  		<div class="card">
+  			<div class="card-content">
+  				<div class="card-body">
+  					卡片正文
+  				</div>
+  				<div class="card-footer">
+  					卡片底部
+  				</div>
+  			</div>
+  			<div class="card-body">
+  				<div class="card-content">
+  					
+  				</div>
+  			</div>
+  			<div class="card-footer"></div>
+  		</div>
+  	</div>
+  </div>
+
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/bootstrap-material-design/dist/js/material.js"></script>
+<script src="bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
+<script src="bower_components/dropdown.js/jquery.dropdown.js"></script>
+
+<!-- <script src="dist/walle.js"></script> -->
+<script>
+  $(function () {
+    $.material.init();
+  })
+  window.onload = function () {
+		var menu1 = $('#walle_menu_1');
+		menu1.find('.menu-list').width(2260);
+		var scrollMenu1 = new IScroll(menu1[0], {
+			scrollX: true, 
+			scrollY: false, 
+			mouseWheel: false,
+			momentum : false,
+			snap : true,
+			snapSpeed : 400,
+			keyBindings : true
+
+		});
+		console.info(scrollMenu1.options);
+		var menu2 = $('#walle_menu_2');
+		menu2.find('.menu-list').width(304*6);
+		var scrollMenu2 = new IScroll(menu2[0], {
+			scrollX: true, 
+			scrollY: false, 
+			mouseWheel: false,
+			momentum : false,
+			snap : true,
+			snapSpeed : 400,
+			keyBindings : true
+
+		});
+		// document.addEventListener('touchmove', function (e) {
+		// 	e.preventDefault();
+		// }, false);
+
+	};
+</script>
+</body>
+</html>

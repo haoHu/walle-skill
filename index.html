@@ -2,13 +2,78 @@
 <html>
     <head>
         <title>Walle Skill</title>
+        <meta charset="utf-8">
+        <meta name="viewport" contnet="width=device-width, initial-scale=1.0">
+        <!-- UI依赖 -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css">
+        <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.css">
+        <link rel="stylesheet" href="bower_components/walle-material/dist/css/walle.css">
+
+        <link rel="stylesheet" href="bower_components/swiper/dist/css/swiper.css">
+
         <link rel="stylesheet" type="text/css" href="styles/main.css" />
+
+        <!-- scripts -->
+        <!-- <script src="bower_components/jquery/dist/jquery.js" charset="utf-8"></script> -->
+        <!-- <script src="bower_components/iscroll/build/iscroll.js" charset="utf-8"></script> -->
+        <!-- <script src="bower_components/avalon/dist/avalon.shim.js" charset="utf-8"></script> -->
+        <!-- Electron的槽点，我不想骂娘，为啥不在Electron里启一个httpserver。这样就不会有这个问题了 -->
+        <script>
+          window.$ = window.jQuery = require('./bower_components/jquery/dist/jquery.js');
+          // window.IScroll = require('./bower_components/iscroll/build/iscroll.js');
+          window.avalon = require('./bower_components/avalon/dist/avalon.shim.js');
+        </script>
+
+        <script src="bower_components/swiper/dist/js/swiper.jquery.js" charset="utf-8"></script>
+
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js" charset="utf-8"></script>
+        <script src="bower_components/bootstrap-material-design/dist/js/material.js" charset="utf-8"></script>
+        <script src="bower_components/bootstrap-material-design/dist/js/ripples.js" charset="utf-8"></script>
+
+
+
+
+        <base href="/" >
     </head>
     <body>
-        <div id="face"></div>
+      <!-- demo1 use ms-include-src -->
+      <!-- <div ms-controller="root">
+        <ul>
+          <li><a href="#!/aaa">aaa</a></li>
+          <li><a href="#!/bbb">bbb</a></li>
+          <li><a href="#!/aaa/detail/555">aaa.detail</a></li>
+          <li><a href="#!/bbb/detail/111">bbb.detail</a></li>
+          <li><a href="#!/aaa/edit/555">aaa.detail.edit</a></li>
+        </ul>
+        <div ms-include-src="content"></div>
+      </div> -->
+
+      <!-- demo2 use ms-view -->
+
+      <div ms-controller="root">
+        <ul>
+          <li><a href="#!/aaa">aaa</a></li>
+          <li><a href="#!/bbb">bbb</a></li>
+          <li><a href="#!/aaa/detail/555">aaa.detail</a></li>
+          <li><a href="#!/bbb/detail/111">bbb.detail</a></li>
+          <li><a href="#!/aaa/edit/555">aaa.detail.edit</a></li>
+        </ul>
+        <div ms-view></div>
+      </div>
+
+
+
+
         <script>
+
+            $(function () {
+              $.material.init();
+            });
             require('behaviorify/register-es6');
+            // 入口文件index.js
             require('./src');
+
         </script>
     </body>
 </html>
